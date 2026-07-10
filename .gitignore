@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Package managers
+.pnpm-store/
+.npm/
+
+# Build
+dist/
+build/
+coverage/
+
+# Cache
+.cache/
+.turbo/
+.next/
+.parcel-cache/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.tsbuildinfo
