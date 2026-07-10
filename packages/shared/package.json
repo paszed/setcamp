@@ -5,25 +5,23 @@
   "description": "Shared utilities for the Paszed Developer Platform.",
   "license": "MIT",
   "type": "module",
-
   "sideEffects": false,
-
   "files": [
     "dist"
   ],
-
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     }
   },
-
   "types": "./dist/index.d.ts",
-
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "clean": "rimraf dist",
     "typecheck": "tsc --project tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "yaml": "^2.9.0"
   }
 }
