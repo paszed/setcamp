@@ -61,7 +61,11 @@ importers:
 
   packages/dependency-cruiser: {}
 
-  packages/devkit: {}
+  packages/devkit:
+    dependencies:
+      '@paszed/shared':
+        specifier: workspace:*
+        version: link:../shared
 
   packages/eslint-config:
     dependencies:
