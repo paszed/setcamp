@@ -1,9 +1,13 @@
 import { join } from "node:path";
 
-import { readFile } from "@paszed/shared";
+import { readYaml } from "@paszed/shared";
+
+import type { PnpmWorkspace } from "../types/index.js";
 
 export async function readPnpmWorkspace(
   workspaceRoot: string,
-): Promise<string> {
-  return readFile(join(workspaceRoot, "pnpm-workspace.yaml"));
+): Promise<PnpmWorkspace> {
+  return readYaml<PnpmWorkspace>(
+    join(workspaceRoot, "pnpm-workspace.yaml"),
+  );
 }
