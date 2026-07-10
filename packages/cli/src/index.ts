@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 import { Command } from "commander";
-import { loadWorkspace } from "@paszed/devkit";
+
+import { workspaceInfo } from "./commands/workspace/info.js";
 
 const program = new Command();
 
@@ -15,11 +16,6 @@ program
   .description("Workspace commands")
   .command("info")
   .description("Display workspace information")
-  .action(async () => {
-    const workspace = await loadWorkspace();
-
-    console.log("Workspace:");
-    console.log(workspace);
-  });
+  .action(workspaceInfo);
 
 await program.parseAsync();
