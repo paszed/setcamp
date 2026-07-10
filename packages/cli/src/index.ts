@@ -18,7 +18,8 @@ program
   .action(async () => {
     const workspace = await loadWorkspace();
 
-    console.log(`Workspace Root: ${workspace.root}`);
+    console.log("Workspace:");
+    console.log(workspace);
   });
 
 await program.parseAsync();

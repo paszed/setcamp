@@ -73,6 +73,9 @@ importers:
       '@paszed/shared':
         specifier: workspace:*
         version: link:../shared
+      fast-glob:
+        specifier: ^3.3.3
+        version: 3.3.3
 
   packages/eslint-config:
     dependencies:
