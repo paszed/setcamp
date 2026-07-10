@@ -2,7 +2,28 @@
   "name": "@paszed/shared",
   "version": "0.1.0",
   "private": true,
-  "description": "Shared utilities for Paszed projects.",
+  "description": "Shared utilities for the Paszed Developer Platform.",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+
+  "sideEffects": false,
+
+  "files": [
+    "dist"
+  ],
+
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+
+  "types": "./dist/index.d.ts",
+
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "clean": "rimraf dist",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  }
 }
