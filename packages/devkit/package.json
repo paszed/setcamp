@@ -1,0 +1,8 @@
+{
+  "name": "@paszed/devkit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Developer tooling for Paszed projects.",
+  "license": "MIT",
+  "type": "module"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@paszed/knip",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Shared Knip configuration for Paszed projects.",
+  "license": "MIT",
+  "type": "module"
+}

@@ -1,9 +1,9 @@
 import js from "@eslint/js";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import type { Linter } from "eslint";
+import type { Config } from "eslint/config";
 
-export function base(): Linter.Config[] {
+export function base(): Config[] {
   return [
     js.configs.recommended,
 
@@ -11,9 +11,10 @@ export function base(): Linter.Config[] {
 
     {
       languageOptions: {
+        ecmaVersion: "latest",
+        sourceType: "module",
+
         globals: {
-          ...globals.browser,
-          ...globals.node,
           ...globals.es2024,
         },
       },

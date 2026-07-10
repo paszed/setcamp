@@ -1,0 +1,17 @@
+{
+  "name": "@paszed/cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Developer CLI for the Developer Platform.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "clean": "rimraf dist",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
+  }
+}

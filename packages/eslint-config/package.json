@@ -5,22 +5,34 @@
   "description": "Shared ESLint configurations for Paszed projects.",
   "license": "MIT",
   "type": "module",
+  "sideEffects": false,
   "files": [
     "dist"
   ],
   "exports": {
-    ".": "./dist/index.js",
-    "./base": "./dist/base.js",
-    "./next": "./dist/next.js",
-    "./storybook": "./dist/storybook.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./base": {
+      "types": "./dist/base.d.ts",
+      "default": "./dist/base.js"
+    },
+    "./next": {
+      "types": "./dist/next.d.ts",
+      "default": "./dist/next.js"
+    },
+    "./storybook": {
+      "types": "./dist/storybook.d.ts",
+      "default": "./dist/storybook.js"
+    }
   },
-  "types": "./dist/index.d.ts",
   "peerDependencies": {
     "eslint": "^9"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc --project tsconfig.json",
     "clean": "rimraf dist",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc --project tsconfig.json --noEmit"
   }
 }

@@ -1,15 +1,33 @@
 import { defineConfig, globalIgnores } from "eslint/config";
+import type { Config } from "eslint/config";
+import globals from "globals";
+
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTypescript from "eslint-config-next/typescript";
 
-import { base } from "./base";
+import { base } from "./base.js";
 
-export function next() {
-  return defineConfig([
+export interface NextOptions {
+  ignores?: string[];
+  rules?: Config["rules"];
+}
+
+export function next(options: NextOptions = {}) {
+  const config: Config[] = [
     ...base(),
 
     ...nextVitals,
+
     ...nextTypescript,
+
+    {
+      languageOptions: {
+        globals: {
+          ...globals.browser,
+          ...globals.node,
+        },
+      },
+    },
 
     globalIgnores([
       ".next/**",
@@ -19,6 +37,16 @@ export function next() {
       "playwright-report/**",
       "test-results/**",
       "next-env.d.ts",
+
+      ...(options.ignores ?? []),
     ]),
-  ]);
+  ];
+
+  if (options.rules) {
+    config.push({
+      rules: options.rules,
+    });
+  }
+
+  return defineConfig(config);
 }

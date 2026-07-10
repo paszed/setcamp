@@ -1,5 +1,6 @@
-import storybook from "eslint-plugin-storybook";
+import type { Config } from "eslint/config";
+import storybookPlugin from "eslint-plugin-storybook";
 
-export function storybook() {
-  return [...storybook.configs["flat/recommended"]];
+export function storybook(): Config[] {
+  return storybookPlugin.configs["flat/recommended"];
 }
