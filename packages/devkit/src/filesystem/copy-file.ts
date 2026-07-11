@@ -1,13 +1,11 @@
-import { dirname } from "node:path";
-import { copyFile as fsCopyFile } from "node:fs/promises";
+import { copyFile } from "node:fs/promises";
 
-import { ensureDirectory } from "./ensure-directory";
-
-export async function copyFile(
+/**
+ * Copies a file.
+ */
+export async function copyFileTo(
 	source: string,
 	destination: string,
 ): Promise<void> {
-	await ensureDirectory(dirname(destination));
-
-	await fsCopyFile(source, destination);
+	await copyFile(source, destination);
 }

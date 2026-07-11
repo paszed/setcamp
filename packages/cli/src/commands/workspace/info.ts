@@ -1,19 +1,18 @@
 import { loadWorkspace } from "@paszed/devkit";
 
+/**
+ * Prints information about the current workspace.
+ */
 export async function workspaceInfo(): Promise<void> {
-  const workspace = await loadWorkspace();
+	const workspace = await loadWorkspace();
 
-  console.log("Developer Platform");
-  console.log();
+	console.log("");
+	console.log(`Root: ${workspace.root}`);
+	console.log(`Packages: ${workspace.packages.length}`);
 
-  console.log("Workspace Root");
-  console.log(`  ${workspace.root}`);
-  console.log();
+	for (const pkg of workspace.packages) {
+		console.log(`  • ${pkg.name}`);
+	}
 
-  console.log(`Packages (${workspace.packages.length})`);
-  console.log();
-
-  for (const pkg of workspace.packages) {
-    console.log(`• ${pkg.name}`);
-  }
+	console.log("");
 }

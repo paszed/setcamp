@@ -2,20 +2,15 @@
 
 import { Command } from "commander";
 
-import { workspaceInfo } from "./commands/workspace/info.js";
+import { registerWorkspaceCommand } from "./commands/workspace";
 
 const program = new Command();
 
 program
-  .name("paszed")
-  .description("Paszed Developer Platform")
-  .version("0.1.0");
+	.name("setcamp")
+	.description("Opinionated developer platform bootstrapper")
+	.version("0.1.0");
 
-program
-  .command("workspace")
-  .description("Workspace commands")
-  .command("info")
-  .description("Display workspace information")
-  .action(workspaceInfo);
+registerWorkspaceCommand(program);
 
-await program.parseAsync();
+program.parse();
