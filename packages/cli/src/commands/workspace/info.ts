@@ -8,10 +8,13 @@ export async function workspaceInfo(): Promise<void> {
 
 	console.log("");
 	console.log(`Root: ${workspace.root}`);
-	console.log(`Packages: ${workspace.packages.length}`);
+	console.log(`Workspace: ${workspace.packageJson.name}`);
 
-	for (const pkg of workspace.packages) {
-		console.log(`  • ${pkg.name}`);
+	console.log("");
+	console.log("Package patterns:");
+
+	for (const pattern of workspace.pnpmWorkspace.packages) {
+		console.log(`  • ${pattern}`);
 	}
 
 	console.log("");

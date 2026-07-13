@@ -9,9 +9,12 @@ export async function initProject(name: string): Promise<void> {
 	const destination = resolve(process.cwd(), name);
 
 	await copyTemplate(
-		process.cwd(),
 		"next-app",
 		destination,
+		{
+			PROJECT_NAME: name,
+			PACKAGE_NAME: name,
+		},
 	);
 
 	console.log(`Initialized ${name}`);

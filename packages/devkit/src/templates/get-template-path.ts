@@ -1,11 +1,10 @@
 import { join } from "node:path";
 
+import { findSetcampRoot } from "../project";
+
 /**
  * Returns the absolute path to a template.
  */
-export function getTemplatePath(
-	root: string,
-	name: string,
-): string {
-	return join(root, "templates", name);
+export function getTemplatePath(name: string): string {
+	return join(findSetcampRoot(), "templates", name);
 }

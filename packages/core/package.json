@@ -1,20 +1,15 @@
 {
-  "name": "@paszed/cli",
+  "name": "@paszed/core",
   "version": "0.1.0",
   "private": true,
-  "description": "Developer CLI for the Paszed Developer Platform.",
+  "description": "Core application logic for Setcamp.",
   "license": "MIT",
   "type": "module",
-
-  "bin": {
-    "paszed": "./dist/index.js"
-  },
+  "sideEffects": false,
 
   "files": [
     "dist"
   ],
-
-  "sideEffects": false,
 
   "exports": {
     ".": {
@@ -32,8 +27,6 @@
   },
 
   "dependencies": {
-  "@paszed/core": "workspace:*",
-  "@paszed/devkit": "workspace:*",
-  "commander": "^15.0.0"
-}
+    "@paszed/devkit": "workspace:*"
+  }
 }
