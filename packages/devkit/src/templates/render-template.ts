@@ -1,5 +1,8 @@
 import { readFile, writeFile } from "node:fs/promises";
 
+/**
+ * Replaces placeholders inside a file.
+ */
 export async function renderTemplate(
 	file: string,
 	values: Record<string, string>,
@@ -10,5 +13,5 @@ export async function renderTemplate(
 		content = content.replaceAll(`{{${key}}}`, value);
 	}
 
-	await writeFile(file, content);
+	await writeFile(file, content, "utf8");
 }

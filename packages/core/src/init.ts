@@ -1,12 +1,18 @@
-import { findSetcampRoot } from "@paszed/devkit";
+import { resolve } from "node:path";
 
-import { copyAssets } from "./copy-assets";
+import { copyTemplate } from "@paszed/devkit";
 
-export async function init(): Promise<void> {
-	const projectRoot = process.cwd();
-	const setcampRoot = findSetcampRoot();
+/**
+ * Initializes a new project.
+ */
+export async function initProject(name: string): Promise<void> {
+	const destination = resolve(process.cwd(), name);
 
-	await copyAssets(setcampRoot, projectRoot);
+	await copyTemplate(
+		process.cwd(),
+		"next-app",
+		destination,
+	);
 
-	console.log("✔ Project initialized");
+	console.log(`Initialized ${name}`);
 }
