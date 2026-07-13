@@ -1,6 +1,6 @@
 import type { Command } from "commander";
 
-import { workspaceInfo } from "./info";
+import { workspaceInfo } from "./info.js";
 
 export function registerWorkspaceCommand(program: Command): void {
 	const workspace = program

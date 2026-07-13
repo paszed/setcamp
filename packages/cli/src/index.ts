@@ -1,7 +1,7 @@
 import { Command } from "commander";
 
-import { registerInitCommand } from "./commands/init";
-import { registerWorkspaceCommand } from "./commands/workspace";
+import { registerInitCommand } from "./commands/init/index.js";
+import { registerWorkspaceCommand } from "./commands/workspace/index.js";
 
 const program = new Command();
 
