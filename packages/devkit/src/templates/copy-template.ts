@@ -1,6 +1,6 @@
-import { copyDirectory } from "../filesystem";
-import { getTemplatePath } from "./get-template-path";
-import { renderTemplates } from "./render-templates";
+import { copyDirectory } from "../filesystem/index.js";
+import { getTemplatePath } from "./get-template-path.js";
+import { renderTemplates } from "./render-templates.js";
 
 /**
  * Copies a template into the destination directory.
@@ -8,13 +8,10 @@ import { renderTemplates } from "./render-templates";
 export async function copyTemplate(
 	template: string,
 	destination: string,
-	values: Record<string, string> = {},
+	values: Record<string, string>,
 ): Promise<void> {
 	const source = getTemplatePath(template);
 
 	await copyDirectory(source, destination);
-
-	if (Object.keys(values).length > 0) {
-		await renderTemplates(destination, values);
-	}
+	await renderTemplates(destination, values);
 }

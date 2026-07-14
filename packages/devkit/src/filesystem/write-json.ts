@@ -1,4 +1,4 @@
-import { writeFile } from "./write-file";
+import { writeFile } from "./write-file.js";
 
 /**
  * Serializes and writes a JSON file.

@@ -1,2 +1,2 @@
-export * from "./init-git";
-export * from "./is-git-repository";
+export * from "./init-git.js";
+export * from "./is-git-repository.js";

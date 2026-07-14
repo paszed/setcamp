@@ -1,6 +1,6 @@
 import fg from "fast-glob";
 
-import { renderTemplate } from "./render-template";
+import { renderTemplate } from "./render-template.js";
 
 /**
  * Renders every text file inside a template.

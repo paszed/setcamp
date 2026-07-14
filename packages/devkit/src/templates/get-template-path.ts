@@ -1,7 +1,6 @@
 import { join } from "node:path";
 
-import { findSetcampRoot } from "../project";
-
+import { findSetcampRoot } from "../project/index.js";
 /**
  * Returns the absolute path to a template.
  */

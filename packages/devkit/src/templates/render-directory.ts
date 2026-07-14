@@ -1,7 +1,7 @@
 import fg from "fast-glob";
 import { join } from "node:path";
 
-import { renderTemplate } from "./render-template";
+import { renderTemplate } from "./render-template.js";
 
 export async function renderDirectory(
 	directory: string,

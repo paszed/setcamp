@@ -1,4 +1,4 @@
-import { readFile } from "./read-file";
+import { readFile } from "./read-file.js";
 
 /**
  * Reads and parses a JSON file.

@@ -1,1 +1,1 @@
-export * from "./find-setcamp-root";
+export * from "./find-setcamp-root.js";

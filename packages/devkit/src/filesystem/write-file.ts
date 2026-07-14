@@ -1,7 +1,7 @@
 import { writeFile as fsWriteFile } from "node:fs/promises";
 import { dirname } from "node:path";
 
-import { ensureDirectory } from "./ensure-directory";
+import { ensureDirectory } from "./ensure-directory.js";
 
 /**
  * Writes a UTF-8 text file.

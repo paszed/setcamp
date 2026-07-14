@@ -1,5 +1,4 @@
-import { runCommand } from "../node";
-
+import { runCommand } from "../node/index.js";
 /**
  * Initializes a Git repository.
  */

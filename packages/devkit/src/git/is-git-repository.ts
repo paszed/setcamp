@@ -1,5 +1,4 @@
-import { exists } from "../filesystem";
-
+import { exists } from "../filesystem/index.js";
 /**
  * Returns true if the directory is a Git repository.
  */
