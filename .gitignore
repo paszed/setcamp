@@ -34,3 +34,7 @@ Thumbs.db
 
 # Misc
 *.tsbuildinfo
+
+# Build output
+**/dist
+**/*.tsbuildinfo
