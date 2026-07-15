@@ -1,38 +1,38 @@
 {
-  "name": "@paszed/eslint-config",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Shared ESLint configurations for Paszed projects.",
-  "license": "MIT",
-  "type": "module",
-  "sideEffects": false,
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
-    "./base": {
-      "types": "./dist/base.d.ts",
-      "default": "./dist/base.js"
-    },
-    "./next": {
-      "types": "./dist/next.d.ts",
-      "default": "./dist/next.js"
-    },
-    "./storybook": {
-      "types": "./dist/storybook.d.ts",
-      "default": "./dist/storybook.js"
-    }
-  },
-  "peerDependencies": {
-    "eslint": "^9"
-  },
-  "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "clean": "rimraf dist",
-    "typecheck": "tsc --project tsconfig.json --noEmit"
-  }
+	"name": "@paszed/eslint-config",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Shared ESLint configurations for Paszed projects.",
+	"license": "MIT",
+	"type": "module",
+	"sideEffects": false,
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./base": {
+			"types": "./dist/base.d.ts",
+			"default": "./dist/base.js"
+		},
+		"./next": {
+			"types": "./dist/next.d.ts",
+			"default": "./dist/next.js"
+		},
+		"./storybook": {
+			"types": "./dist/storybook.d.ts",
+			"default": "./dist/storybook.js"
+		}
+	},
+	"peerDependencies": {
+		"eslint": "^9"
+	},
+	"scripts": {
+		"build": "tsc --project tsconfig.json",
+		"clean": "rimraf dist",
+		"typecheck": "tsc --project tsconfig.json --noEmit"
+	}
 }

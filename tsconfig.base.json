@@ -1,28 +1,28 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
+	"$schema": "https://json.schemastore.org/tsconfig",
 
-  "compilerOptions": {
-    "target": "ES2024",
+	"compilerOptions": {
+		"target": "ES2024",
 
-    "strict": true,
+		"strict": true,
 
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true,
 
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
+		"isolatedModules": true,
+		"verbatimModuleSyntax": true,
 
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
+		"esModuleInterop": true,
+		"resolveJsonModule": true,
 
-    "skipLibCheck": true,
+		"skipLibCheck": true,
 
-    "forceConsistentCasingInFileNames": true,
+		"forceConsistentCasingInFileNames": true,
 
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+		"noUncheckedIndexedAccess": true,
+		"exactOptionalPropertyTypes": true,
 
-    "types": ["node"]
-  }
+		"types": ["node"]
+	}
 }

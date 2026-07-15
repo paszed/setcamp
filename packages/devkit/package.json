@@ -1,28 +1,28 @@
 {
-  "name": "@paszed/devkit",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Developer tooling for the Paszed Developer Platform.",
-  "license": "MIT",
-  "type": "module",
-  "sideEffects": false,
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
-  },
-  "types": "./dist/index.d.ts",
-  "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "clean": "rimraf dist",
-    "typecheck": "tsc --project tsconfig.json --noEmit"
-  },
-  "dependencies": {
-    "@paszed/shared": "workspace:*",
-    "fast-glob": "^3.3.3"
-  }
+	"name": "@paszed/devkit",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Developer tooling for the Paszed Developer Platform.",
+	"license": "MIT",
+	"type": "module",
+	"sideEffects": false,
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"types": "./dist/index.d.ts",
+	"scripts": {
+		"build": "tsc --project tsconfig.json",
+		"clean": "rimraf dist",
+		"typecheck": "tsc --project tsconfig.json --noEmit"
+	},
+	"dependencies": {
+		"@paszed/shared": "workspace:*",
+		"fast-glob": "^3.3.3"
+	}
 }

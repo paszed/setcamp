@@ -1,39 +1,39 @@
 {
-  "name": "@paszed/cli",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Developer CLI for the Paszed Developer Platform.",
-  "license": "MIT",
-  "type": "module",
+	"name": "@paszed/cli",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Developer CLI for the Paszed Developer Platform.",
+	"license": "MIT",
+	"type": "module",
 
-  "bin": {
-    "paszed": "./dist/index.js"
-  },
+	"bin": {
+		"paszed": "./dist/index.js"
+	},
 
-  "files": [
-    "dist"
-  ],
+	"files": [
+		"dist"
+	],
 
-  "sideEffects": false,
+	"sideEffects": false,
 
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
-  },
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
 
-  "types": "./dist/index.d.ts",
+	"types": "./dist/index.d.ts",
 
-  "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "clean": "rimraf dist",
-    "typecheck": "tsc --project tsconfig.json --noEmit"
-  },
+	"scripts": {
+		"build": "tsc --project tsconfig.json",
+		"clean": "rimraf dist",
+		"typecheck": "tsc --project tsconfig.json --noEmit"
+	},
 
-  "dependencies": {
-  "@paszed/core": "workspace:*",
-  "@paszed/devkit": "workspace:*",
-  "commander": "^15.0.0"
-}
+	"dependencies": {
+		"@paszed/core": "workspace:*",
+		"@paszed/devkit": "workspace:*",
+		"commander": "^15.0.0"
+	}
 }

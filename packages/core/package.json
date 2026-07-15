@@ -1,32 +1,32 @@
 {
-  "name": "@paszed/core",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Core application logic for Setcamp.",
-  "license": "MIT",
-  "type": "module",
-  "sideEffects": false,
+	"name": "@paszed/core",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Core application logic for Setcamp.",
+	"license": "MIT",
+	"type": "module",
+	"sideEffects": false,
 
-  "files": [
-    "dist"
-  ],
+	"files": [
+		"dist"
+	],
 
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    }
-  },
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
 
-  "types": "./dist/index.d.ts",
+	"types": "./dist/index.d.ts",
 
-  "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "clean": "rimraf dist",
-    "typecheck": "tsc --project tsconfig.json --noEmit"
-  },
+	"scripts": {
+		"build": "tsc --project tsconfig.json",
+		"clean": "rimraf dist",
+		"typecheck": "tsc --project tsconfig.json --noEmit"
+	},
 
-  "dependencies": {
-    "@paszed/devkit": "workspace:*"
-  }
+	"dependencies": {
+		"@paszed/devkit": "workspace:*"
+	}
 }

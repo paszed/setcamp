@@ -11,10 +11,7 @@ export async function runCommand(
 	args: string[],
 	cwd: string,
 ): Promise<void> {
-
-
- await exec(command, args, {
-	cwd,
-});
-
+	await exec(command, args, {
+		cwd,
+	});
 }

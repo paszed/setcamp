@@ -5,19 +5,19 @@ import { readJson } from "@paszed/shared";
 import type { WorkspacePackage } from "../types/index.js";
 
 interface PackageJson {
-  name: string;
+	name: string;
 }
 
 export async function readPackageJson(
-  packagePath: string,
+	packagePath: string,
 ): Promise<WorkspacePackage> {
-  const packageJsonPath = join(packagePath, "package.json");
+	const packageJsonPath = join(packagePath, "package.json");
 
-  const packageJson = await readJson<PackageJson>(packageJsonPath);
+	const packageJson = await readJson<PackageJson>(packageJsonPath);
 
-  return {
-    name: packageJson.name,
-    path: packagePath,
-    packageJsonPath,
-  };
+	return {
+		name: packageJson.name,
+		path: packagePath,
+		packageJsonPath,
+	};
 }

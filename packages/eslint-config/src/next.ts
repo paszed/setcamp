@@ -8,45 +8,45 @@ import nextTypescript from "eslint-config-next/typescript";
 import { base } from "./base.js";
 
 export interface NextOptions {
-  ignores?: string[];
-  rules?: Config["rules"];
+	ignores?: string[];
+	rules?: Config["rules"];
 }
 
 export function next(options: NextOptions = {}) {
-  const config: Config[] = [
-    ...base(),
+	const config: Config[] = [
+		...base(),
 
-    ...nextVitals,
+		...nextVitals,
 
-    ...nextTypescript,
+		...nextTypescript,
 
-    {
-      languageOptions: {
-        globals: {
-          ...globals.browser,
-          ...globals.node,
-        },
-      },
-    },
+		{
+			languageOptions: {
+				globals: {
+					...globals.browser,
+					...globals.node,
+				},
+			},
+		},
 
-    globalIgnores([
-      ".next/**",
-      "out/**",
-      "build/**",
-      "coverage/**",
-      "playwright-report/**",
-      "test-results/**",
-      "next-env.d.ts",
+		globalIgnores([
+			".next/**",
+			"out/**",
+			"build/**",
+			"coverage/**",
+			"playwright-report/**",
+			"test-results/**",
+			"next-env.d.ts",
 
-      ...(options.ignores ?? []),
-    ]),
-  ];
+			...(options.ignores ?? []),
+		]),
+	];
 
-  if (options.rules) {
-    config.push({
-      rules: options.rules,
-    });
-  }
+	if (options.rules) {
+		config.push({
+			rules: options.rules,
+		});
+	}
 
-  return defineConfig(config);
+	return defineConfig(config);
 }

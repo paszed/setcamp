@@ -1,3 +1,3 @@
 export interface PnpmWorkspace {
-  packages: string[];
+	packages: string[];
 }

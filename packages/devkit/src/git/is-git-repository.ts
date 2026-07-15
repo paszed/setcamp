@@ -7,4 +7,3 @@ export async function isGitRepository(
 ): Promise<boolean> {
 	return exists(`${path}/.git`);
 }
-

@@ -1,5 +1,5 @@
 export interface WorkspacePackage {
-  name: string;
-  path: string;
-  packageJsonPath: string;
+	name: string;
+	path: string;
+	packageJsonPath: string;
 }

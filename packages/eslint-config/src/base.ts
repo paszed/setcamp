@@ -4,27 +4,27 @@ import tseslint from "typescript-eslint";
 import type { Config } from "eslint/config";
 
 export function base(): Config[] {
-  return [
-    js.configs.recommended,
+	return [
+		js.configs.recommended,
 
-    ...tseslint.configs.recommended,
+		...tseslint.configs.recommended,
 
-    {
-      languageOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
+		{
+			languageOptions: {
+				ecmaVersion: "latest",
+				sourceType: "module",
 
-        globals: {
-          ...globals.es2024,
-        },
-      },
-    },
+				globals: {
+					...globals.es2024,
+				},
+			},
+		},
 
-    {
-      rules: {
-        "no-console": "warn",
-        "no-debugger": "error",
-      },
-    },
-  ];
+		{
+			rules: {
+				"no-console": "warn",
+				"no-debugger": "error",
+			},
+		},
+	];
 }

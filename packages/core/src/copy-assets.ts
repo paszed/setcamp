@@ -6,8 +6,5 @@ export async function copyAssets(
 	setcampRoot: string,
 	projectRoot: string,
 ): Promise<void> {
-	await copyDirectory(
-		join(setcampRoot, "assets"),
-		projectRoot,
-	);
+	await copyDirectory(join(setcampRoot, "assets"), projectRoot);
 }
