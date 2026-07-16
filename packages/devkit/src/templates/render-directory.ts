@@ -1,5 +1,5 @@
-import fg from "fast-glob";
 import { join } from "node:path";
+import fg from "fast-glob";
 
 import { renderTemplate } from "./render-template.js";
 

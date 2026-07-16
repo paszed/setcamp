@@ -1,9 +1,8 @@
-import { defineConfig, globalIgnores } from "eslint/config";
 import type { Config } from "eslint/config";
-import globals from "globals";
-
+import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTypescript from "eslint-config-next/typescript";
+import globals from "globals";
 
 import { base } from "./base.js";
 

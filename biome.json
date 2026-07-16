@@ -1,0 +1,30 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.5.3/schema.json",
+
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab"
+	},
+
+	"linter": {
+		"enabled": true
+	},
+
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on"
+			}
+		}
+	},
+
+	"files": {
+		"includes": [
+			"**",
+			"!**/node_modules",
+			"!**/dist",
+			"!**/.turbo",
+			"!**/coverage"
+		]
+	}
+}

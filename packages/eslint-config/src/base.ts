@@ -1,7 +1,7 @@
 import js from "@eslint/js";
+import type { Config } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import type { Config } from "eslint/config";
 
 export function base(): Config[] {
 	return [
